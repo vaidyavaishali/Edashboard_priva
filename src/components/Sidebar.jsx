@@ -20,7 +20,7 @@ export const Sidebar = () => {
 
   return (
     <div
-      className={`bg-black text-white h-screen ${isSidebarOpen ? "w-1/6" : "w-20"} transition-all duration-300 overflow-y-auto px-2 custom-scrollbar relative`}
+      className={`bg-black text-white h-screen ${isSidebarOpen ? "w-1/6" : "w-20"} transition-all duration-300 overflow-y-auto px-2 custom-scrollbar relative hidden md:block`}
     >
       <div
         className={`bg-black text-white flex items-center h-auto w-full sticky top-0 py-5 mt-3 ${isSidebarOpen ? "justify-between" : "justify-center"}`}

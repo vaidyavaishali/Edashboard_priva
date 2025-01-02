@@ -85,8 +85,8 @@ const Products = () => {
     );
 
     return (
-        <div className={`min-h-screen text-white ${isSidebarOpen ? 'w-[82vw]' : 'ml-0 w-[94vw]'} transition-all`}>
-            <div className="w-full mx-auto h-full p-10">
+        <div className={`min-h-screen text-white ${isSidebarOpen ? 'w-[100vw] md:w-[82vw] ' : 'ml-0 w-full md:w-[94vw]'} transition-all`}>
+            <div className="w-full mx-auto h-full p-3 md:p-10">
                 <h1 className="text-3xl font-semibold mb-8 text-center text-gray-800">Product Management</h1>
 
                 <div className="mb-6 flex justify-between items-center">
@@ -104,8 +104,8 @@ const Products = () => {
                     </select>
                 </div>
 
-                <div className="overflow-x-hidden w-full">
-                    <table className="w-full border-collapse border border-gray-300 shadow-lg rounded-lg">
+                <div className="overflow-x-auto w-full">
+                    <table className="min-w-full border-collapse border border-gray-300 shadow-lg rounded-lg">
                         <thead className="bg-gray-800 text-white sticky top-0 z-10">
                             <tr>
                                 {columns.map((col, index) => (
@@ -151,7 +151,8 @@ const Products = () => {
                         </tbody>
                     </table>
 
-                    <div className="flex justify-center gap-5 items-center mt-4">
+                    {/* Pagination */}
+                    <div className="flex justify-center gap-5 items-center mt-4 flex-wrap">
                         <button
                             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                             disabled={currentPage === 1}

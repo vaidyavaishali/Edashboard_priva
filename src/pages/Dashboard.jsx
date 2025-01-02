@@ -36,7 +36,7 @@ const Dashboard = () => {
     }
 
     return (
-        <div className={`min-h-screen bg-gray-200 text-white ${isSidebarOpen ? 'w-[82vw]' : 'ml-0 w-[94vw]'} transition-all`}>
+        <div className={`min-h-screen bg-gray-200 text-white ${isSidebarOpen ? ' w-[100vw] md:w-[82vw]' : 'ml-0 w-[94vw]'} transition-all`}>
             <h1 className="text-4xl pt-6 font-bold text-center text-gray-800 mb-10">Dashboard</h1>
             <div className="w-full max-w-6xl mx-auto bg-gray-400 shadow-lg rounded-lg p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <DashboardCard
